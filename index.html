@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta name="keywords" content="duhoot">
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>duhoot</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">			
+	<link rel="stylesheet" type="text/css" href="css/style.css">	
+</head>
+
+<body>
+
+	<header class="header">
+		<nav>
+			<div class="nav-wrapper">
+				<div class="container nav">
+					<a href="#" class="brand-logo"><img src="/img/logo.svg" width="150" height="65" alt="duhoot"></a>
+					<a href="#" data-target="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+					<ul class="right hide-on-med-and-down">
+						<li><a href="#">reality</a></li>
+						<li><a href="#">living</a></li>
+						<li><a href="#">education</a></li>
+						<li><a href="#">entertaiment</a></li>
+						<li><a href="#">mobility</a></li>
+						<li class="nav__search"><a href="#"><i class="far fa-search"></i></a></li>
+						<li class="nav__login"><a href="#"><i class="fas fa-user"></i></a></li>
+					</ul>
+					<ul class="side-nav" id="mobile-demo">
+						<li><a href="#!">reality</a></li>
+						<li><a href="#!">living</a></li>
+						<li><a href="#!">education</a></li>
+						<li><a href="#!">entertaiment</a></li>
+						<li><a href="#!">mobility</a></li>
+						<li><a href="#!"><i class="far fa-search"></i></a></li>
+						<li><a href="#!"><i class="fas fa-user"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>	
+		
+	</header>
+
+	<main>
+		<section class="find">
+			<div class="container">
+				<div class="row">
+					<div class="col m10 offset-m1 l6 offset-l3 center-align">
+						<h2>What are you looking for?</h2>
+					</div>
+				</div>
+				<form action="post">
+					<div class="row">
+						<div class="input-field col s5 offset-s1 offset-l3 l3">
+						<select>
+							<option value="1">Dubai</option>
+							<option value="2">Malta</option>
+							<option value="3">Australia</option>
+						</select>
+						</div>						
+						<div class="input-field col s5 l3">
+						<select multiple>
+							<option value="1">Education</option>
+							<option value="2">Travel</option>
+							<option value="3">Bus Trip</option>
+						</select>
+						</div>
+					</div>				
+					<div class="row">
+						<div class="input-field col s10 offset-s1 l6 offset-l3">
+							<input id="search" type="search" required placeholder="Keyword, name, date, ...">
+							<i class="material-icons">close</i>									
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s2 offset-s5">
+							<button class="mybtn mybtn-big waves-effect waves-light" type="submit" name="action">Search
+							</button>											
+						</div>
+					</div>		
+				</form>				
+			</div>
+		</section>
+
+		<section class="filter">
+			<div class="container row">
+				<div class="col l4 m6 left-align filter__left">
+					<a href="!#">recomended</a>
+					<a href="!#">latest</a>
+					<a href="!#">highlights</a>
+				</div>
+				<div class="col l4 m6 center-align filter__center">
+					<select class="filter__center__city">
+						<option value="0" disabled> Education</option>
+						<option value="1">Education</option>
+						<option value="2">Travel</option>
+						<option value="3">Bus Trip</option>
+					</select>					
+					<div class="filter__center__map hide-on-med-and-down"><a href="#" class="mybtn mybtn-small">hide map <i class="fas fa-map-marker-alt"></i></a></div>
+				</div>
+				<div class="col l4 filter__right">
+					<ul class="hide-on-med-and-down">
+						<span>filter:</span>	
+						<li class="icons__small icons__small-green waves-effect waves-light"><i class="far fa-home"></i></li>
+						<li class="icons__small icons__small-grey waves-effect waves-light"><i class="fal fa-child"></i></li>
+						<li class="icons__small icons__small-grey waves-effect waves-light"><i class="far fa-graduation-cap"></i></li>
+						<li class="icons__small icons__small-yellow waves-effect waves-light"><i class="far fa-music"></i></li>
+						<li class="icons__small icons__small-purpure waves-effect waves-light"><i class="far fa-bus"></i></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="content">
+			<div class="container">
+					<div class="row">
+						<div class="col l3 m4 s6">
+							<div class="box box-bus">
+								<img src="img/photo2.jpg" alt="">
+								<div class="box__text">
+									<span class="box__text__info">blabla</span>
+									<div class="box__text__name">
+									<span>Bus Trans</span>
+									<span class="box__text__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>
+									</div>
+										<span class="box__text__icon icons__big icons__big-purpure"><i class="far fa-bus"></i></span>
+								</div>
+							</div>
+						</div>
+						<div class="col l3 m4 s6">
+							<div class="box box-house">
+								<img src="img/photo1.jpg" alt="">
+								<div class="box__text">
+									<span class="box__text__info">2 bedroom house for rent in Dubai</span>
+									<div class="box__text__name">
+										<span>Vision Agency</span>
+										<span class="box__text__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>
+									</div>
+									<span class="box__text__price">500$</span>
+									<span class="box__text__icon icons__big icons__big-green"><i class="far fa-home"></i></span>
+								</div>
+							</div>
+						</div>
+						<div class="col l3 m4 s6">
+							<div class="box box-fest">
+								<img src="img/photo2.jpg" alt="">
+								<div class="box__text">
+									<span class="box__text__info">Beach party festival 2014</span>
+									<div class="box__text__name">
+										<span>Long beach</span>
+										<span class="box__text__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>(569)</span>
+									</div>
+									<span class="box__text__icon icons__big icons__big-yellow"><i class="far fa-music"></i></span>
+								</div>
+							</div>
+						</div>
+						<div class="col l3 m4 s6">
+							<div class="box box-bus">
+								<img src="img/photo6.jpg" alt="">
+								<div class="box__text">
+									<span class="box__text__info">Aliquam quis pulvinar putrus</span>
+									<div class="box__text__name">
+										<span>guest house</span>
+										<span class="box__text__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>(351)</span>
+									</div>
+									<span class="box__text__icon icons__big icons__big-purpure"><i class="far fa-bus"></i></span>
+								</div>
+							</div>
+						</div>
+						<div class="col  l3 m4 s6">
+							<div class="box box-bus">
+								<img src="img/photo2.jpg" alt="">
+								<div class="box__text">
+									<span class="box__text__info">4 bedroom house for rent in Dubai</span>
+									<div class="box__text__name">
+										<span>guest house</span>
+										<span class="box__text__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>(3112)</span>
+									</div>
+									<span class="box__text__icon icons__big icons__big-purpure"><i class="far fa-bus"></i></span>
+								</div>
+							</div>
+						</div>
+						<div class="col  l3 m4 s6">
+							<div class="box box-house">
+								<img src="img/photo1.jpg" alt="">
+								<div class="box__text">
+									<span class="box__text__info">4 bedroom house for rent in Dubai</span>
+									<div class="box__text__name">
+										<span>reality Agency</span>
+										<span class="box__text__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>
+									</div>
+									<span class="box__text__price">522$</span>
+									<span class="box__text__icon icons__big icons__big-green"><i class="far fa-home"></i></span>
+								</div>
+							</div>
+						</div>
+						<div class="col l6 s12">
+							<div class="box box-big box-fest">
+								<img src="img/image1.jpg" alt="">
+								<div class="box__text">
+									<div class="box__text__name">
+										<span>Vision agency</span>
+										<span class="box__text__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><span>
+									</div>
+									<span class="box__text__icon icons__big icons__big-yellow"><i class="far fa-music"></i></span>
+								</div>
+								<div class="box__text__comment">
+									<div class="box__text__comment-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+									<img src="img/bus.png" alt="">
+									<b>Peter145</b>
+									<p>“Aliquam quis pulvinar purus. Etiam cursus ipsum quis enim faucibus, quis posuere orci ornare. Duis mattis sagittis fringilla.” <a href="#">...read more</a>	</p>
+								</div>
+							</div>
+						</div>
+						<div class="col l6 s12">
+							<div class="box box-big box-fest">
+								<img src="img/image2.jpg" alt="">
+								<div class="box__text">
+									<div class="box__text__name">
+										<span>Skytbox club</span>
+										<span class="box__text__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>
+									</div>
+									<span class="box__text__icon icons__big icons__big-yellow"><i class="far fa-music"></i></span>
+									<div class="box__text__comment">
+										<div class="box__text__comment-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+										<img src="img/bus.png" alt="">
+										<b>Peter145</b>
+										<p>“Aliquam quis pulvinar purus. Etiam cursus ipsum quis enim faucibus, quis posuere orci ornare. Duis mattis sagittis fringilla.” <a href="#">...read more</a>	</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col l6 s12">
+							<div class="box box-big box-fest">
+								<img src="img/image2.jpg" alt="">
+								<div class="box__text">
+									<div class="box__text__name">
+										<span>Skytbox club</span>
+										<span class="box__text__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span>
+									</div>
+									<span class="box__text__icon icons__big icons__big-yellow"><i class="far fa-music"></i></span>
+									<div class="box__text__comment">
+										<div class="box__text__comment-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+										<img src="img/bus.png" alt="">
+										<b>Lucy-P</b>
+										<p>“Aliquam quis pulvinar purus. Etiam cursus ipsum quis enim faucibus, quis posuere orci ornare. Duis mattis sagittis fringilla.” <a href="#">...read more</a>	</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>					
+				<div class="row">
+					<div class="col s2 offset-s5 center-align load_more"><a href="#">Load more <i class="large material-icons">arrow_forward</i></a></div>
+				</div>			
+				<hr>
+			</div>
+		</section>
+
+		<section class="wecando">
+			<div class="container">
+				<div class="row">
+					<div class="wecando__title col s8 offset-s2 center-align">
+						<h3>What can DuHoot offer to you?</h3>
+						<p>Etiam cursus ipsum quis enim faucibus</p>
+					</div>
+				</div>
+				<div class="wecando__rowicon hide-on-med-and-down">
+						<i class="far fa-home"></i>
+						<i class="fal fa-child"></i>
+						<i class="far fa-graduation-cap"></i>
+						<i class="far fa-music"></i>
+						<i class="far fa-bus"></i>
+				</div>
+				<div class="wecando__text row">
+					<div class="col s12 center-align"><h5>Reality</h5></div>					
+					<div class="col l6 m12 wecando__text__box"><span><i class="far fa-bolt"></i></span><p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi gravida tellus in purus pharetra, vel dignissim mauris viverra. Maecenas vitae risus est. In hendrerit, massa at.</p></div>
+					<div class="col l6 m12 wecando__text__box"><span><i class="fas fa-leaf"></i></span><p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi gravida tellus in purus pharetra, vel dignissim mauris viverra. Maecenas vitae risus est. In hendrerit, massa at.</p></div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__subscribes row">
+				<h2 class="center-align">Subscribe to our newslatter</h2>
+				<div class="col m6 offset-m3 center-align">
+					<form action="footer__subscribes_form col s12">
+						<input id="e-mail" type="email" class="validate" placeholder="your@email.com">
+						<button class="mybtn btn waves-effect waves-light" type="submit" name="action">subscribe
+						</button>
+					</form>
+				</div>
+			</div>
+			<hr>
+			<div class="footer__bottom row">
+				<div class="col l4 m6 left-align">
+					<h5>Ipsum quis</h5> 
+					<ul>
+						<li><a href="#">Aliquam quis</a></li>
+						<li><a href="#">Pulvinar purus</a></li>
+						<li><a href="#">Etiam cursus</a></li>
+						<li><a href="#">Ipsum quis</a></li>
+						<li><a href="#">Enim faucibus</a></li>
+				</ul></div>
+				<div class="col l4 m6 left-align">
+					<h5>Ipsum quis</h5> 
+					<ul>
+						<li><a href="#">Aliquam quis</a></li>
+						<li><a href="#">Pulvinar purus</a></li>
+						<li><a href="#">Etiam cursus</a></li>
+						<li><a href="#">Ipsum quis</a></li>
+						<li><a href="#">Enim faucibus</a></li>
+				</ul></div>
+				<div class="col l4 m12">
+					<h5>Follow us</h5>
+					<div class="footer__bottom__socials">
+						<a href="#" class="socials_f"><i class="fab fa-facebook-f"></i></a>
+						<a href="#" class="socials_tw"><i class="fab fa-twitter"></i></a>
+						<a href="#" class="socials_g"><i class="fab fa-google-plus-g"></i></a>
+						<a href="#" class="socials_yt"><i class="fab fa-youtube"></i></a>	
+					</div>
+					<p>Copyright © All Rights reserved</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+		<script>
+			$(document).ready(function(){			
+				$('select').formSelect();
+				$('.button-collapse').sidenav();			
+			});	
+		</script>
+
+</body>
+</html>

@@ -1,0 +1,231 @@
+//colors
+    $color_red: #e94e38;
+    $color_green: #1baf5d;
+    $color_yellow: #f19e1f;
+    $color_purpure: #88499c;
+    $color_text: #566375;
+
+
+//mixins
+    @mixin font($font) {
+        font-family: $font, Arial, Helvetica, sans-serif;
+    }
+
+    @mixin bg(){
+    background: linear-gradient(rgba(black, 0.6) 0%,rgba(black, 0.6) 100%), url(../img/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+    @mixin darkbg(){
+        background: linear-gradient(rgba(black, 0.8) 0%,rgba(black, 0.8) 100%), url(../img/bg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        }
+    @mixin radius($radius){
+        border-radius: $radius; //закругление углов (общее)
+        -webkit-border-radius: $radius; //закругление углов (Google Chrome)
+        -moz-border-radius: $radius; //закругление углов (FireFox)
+        -khtml-border-radius: $radius; //закругление углов (Safari)
+    }
+    @mixin text-shadow($color){
+        text-shadow: 0 0 10px $color;
+    }
+
+//fonts
+    @font-face {
+        font-family: 'Gotham';
+        src: url('../fonts/gotham/Gotham-Medium.woff2') format('woff2'),
+            url('../fonts/gotham/Gotham-Medium.woff') format('woff');
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Gotham-bold';
+        src: url('../fonts/gotham/Gotham-Bold.woff2') format('woff2'),
+            url('../fonts/gotham/Gotham-Bold.woff') format('woff');
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Gotham Book';
+        src: url('../fonts/gotham/Gotham-Book.woff2') format('woff2'),
+            url('../fonts/gotham/Gotham-Book.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+
+hr {
+    border-color: rgba(grey, 0.3);
+    width: 80%;
+}
+
+* {
+    outline: 0;
+
+}
+a {
+    color: black;
+  }
+body {
+    @include font("Gotham Book");
+}
+
+.mybtn { 
+    display: block;
+    background: $color_red;
+    border: 0;
+    color: white;
+    @include radius(30px);
+
+    &-small {
+        line-height: 37px;
+        font-size: 12px;
+
+    }
+    &-big {  
+        line-height: 60px;
+        padding: 0 30px;
+        font-size: 18px;
+        @include font("Gotham");
+    
+    }  
+    &:focus {
+        background-color: $color_red;
+    }
+} 
+
+//input form
+
+    .select-wrapper span.caret {
+        height: 9px;
+        width: 9px;
+        display: block;
+        font-size: 0px;
+        color: white;
+        right: 5px;
+        border-bottom: 3px solid white;
+        border-left: 3px solid white;
+        transform: rotate(-45deg);
+    }
+    input{
+        margin-right: 3px;
+    }
+    .select-wrapper input.select-dropdown{        
+        color: white;
+        background: rgba(#bbb, 0.2);
+        border: none;
+        @include radius(30px);
+        line-height: 40px;
+        height: 50px;
+        padding-left: 15px;
+    }
+    .input-field {
+        input[type=search] {
+            color: white;
+            background: rgba(#bbb, 0.2);
+            border: none;
+            @include radius(30px);
+            line-height: 40px;
+            height: 50px;
+            padding: 0 15px;
+            }
+        input[type=search]:focus,
+        input[type=search]:not(.browser-default):focus:not([readonly]) {
+            background: rgba(#bbb, 0.2);
+            color: white;
+            border: none;        
+            box-shadow: 0 1px 0 0 $color_red;
+        }    
+        input[type=search] ~ .mdi-navigation-close,
+            input[type=search] ~ .material-icons {
+            top: 10px;
+            right: 5px;
+        }
+    }
+    .dropdown-content {
+        background: rgba(#bbb, 0.7);
+        @include radius(30px);
+        top: 30px;
+        li {
+            span {  
+                color: white;
+                @include text-shadow(black);
+                &:hover {
+                    background: rgba(#bbb, 0.9);
+                }
+            }
+            &:first-child {
+                padding-top: 50px;
+            }
+            &:last-child {
+                padding-bottom: 20px;
+            }
+        }            
+    }
+    [type="checkbox"]:checked+label:before {    
+        border-top: 2px solid transparent;
+        border-left: 2px solid transparent;
+        border-right: 2px solid $color_red;
+        border-bottom: 2px solid $color_red;
+    }
+//icons        
+    .icons {  
+        &__small {
+            border-radius: 50%;   
+            width: 44px;
+            height: 44px;
+            border: 2px solid white;  
+            position: relative;
+            i {
+                position: absolute;
+                top: 8px;
+                left: 8px;
+                color: white;
+                font-size: 22px;                 
+            }
+            i.fa-child {
+                left: 10px;
+            }
+            &-purpure {
+                background: $color_purpure;
+            }   
+            &-yellow {
+                background: $color_yellow;                
+            }
+            &-grey {
+                background: grey;
+            }
+            &-green {
+                background: $color_green;
+            }
+        }
+        &__big {
+            i {
+                color: white;
+                font-size: 34px;
+                line-height: 60px;
+                text-align: center;
+            }
+            border-radius: 50%;   
+            width: 66px;
+            height: 66px;
+            border: 3px solid white;
+            &-purpure {
+                background: $color_purpure;
+            }
+            &-yellow {
+                background: $color_yellow;
+            }
+            &-green {
+                background: $color_green;
+            }
+            &-grey {
+                background: grey;
+            }  
+        }
+    }

@@ -1,0 +1,407 @@
+
+@import "global.scss";
+
+nav {
+    background: white;
+    .nav {
+        overflow: hidden;
+        a { 
+            color: gray;
+            text-transform: uppercase;
+        }
+        &__search {
+            background: #bbb;
+            padding: 0 5px;
+            a {
+                color: white; 
+            }
+        } 
+        &__login {
+                background: $color_red;
+                width: 200px;
+                padding-right: 0;
+            a {
+                color: white; 
+            }
+        } 
+    }
+}
+
+.find {
+    color: white;
+    @include bg; 
+    padding-bottom: 50px;
+}   
+   
+.filter {
+    text-transform: uppercase;
+    height: 55px;
+    background: #fff;
+    display: flex;
+    flex-wrap: nowrap;
+    line-height: 55px;
+    font-size: 12px;
+    @include font("Gotham");     
+    color: #96a6a7;
+    span.caret {
+        border-color: grey;
+        right: 10px;
+        top: -3px;
+    }
+    &__right {
+        margin: 0; 
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 55px;
+        li { 
+            padding-right: 4px;
+            display: inline-block; 
+            &:last-child {
+                padding-right: 0;
+            }
+        } 
+    }
+    &__left {
+        a {            
+            color: #96a6a7;
+            margin-right: 20px;
+            text-align: left;
+            &:hover {
+                color: rgb(233, 78, 56);
+            }                  
+        }
+    } 
+    &__center {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+        height: 40px;
+        margin-top: 9px;
+        &__city { 
+            margin-right: 10px;
+
+            input.select-dropdown { 
+                background: transparent;
+                width: 120px;
+                height: 33px;
+                border: 2px solid rgba(grey, 0.5);
+                color: $color_red;
+            }
+            .dropdown-content {
+                border-radius: 20px;
+                background: white;
+            } 
+        }
+        &__map { 
+            .mybtn {
+            background: $color_green;
+            color: white;
+            font-size: 12px;
+            width: 125px;
+            }
+            i {
+                font-size: 15px;
+                vertical-align: middle;
+            }
+        }
+    }
+} 
+
+.content {
+    padding: 45px 0;
+    background: #f3f1f2; 
+    .box {
+        margin: 0 auto;
+        margin-bottom: 30px;
+        width: 210px;
+        height: 265px;
+        background: #fff;
+        border-radius: 5px;
+        overflow: hidden;
+        color: $color_text;
+        text-align: center;
+        position: relative;
+        
+        img {            
+            margin-bottom: 30px;
+        }
+        &__text {
+            display: flex;
+            flex-direction: column;
+            &__icon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -24px;
+                margin-left: -33px;
+            }
+            &__price {
+                display: block;
+                background: $color_green;
+                padding: 3px 10px;
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                border-radius: 30px;
+                color: white;
+            }
+            &__stars > i {
+                font-size: 12px;
+                color: goldenrod;
+                }
+            &__info {
+                color: $color_text;
+                padding: 0 5px;  
+                padding-bottom: 5px;  
+                font-size: 12px;
+                line-height: 16px;            
+            }
+            &__name {
+                position: absolute;
+                bottom: 5px;
+                text-transform: uppercase;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                filter: drop-shadow(1px 0 1px grey);
+            }
+        }
+        &-bus {
+            img {            
+            border-bottom: 3px solid $color_purpure;            
+            }
+            .box__text__name {
+                color: $color_purpure;
+            }
+        }
+        &-house {
+            img {            
+                border-bottom: 3px solid $color_green;            
+            }
+            .box__text__name {
+                color: $color_green;
+            }
+        }
+        &-fest {
+            img {            
+                border-bottom: 3px solid $color_yellow;            
+            }
+            .box__text__name {
+                color: $color_yellow;
+            }
+        }    
+
+        &-big {
+            width: 455px;
+            img {
+                width: 100%;
+            }
+            .box__text { 
+                &__name {
+                    bottom: auto;
+                    top: 90px;
+                    color: white;
+                    left: 130px;
+                    font-size: 18px;
+                    @include font("Gotham");
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    span {
+                        margin-right: 20px;
+                    }
+                }
+                &__icon {
+                    margin-top: -44px;
+                    left: 50px;
+                }
+                &__comment {
+                    position: absolute;
+                    top: 125px;
+                    left: 100px;
+                    width: 355px;
+                    text-align: left;
+                    font-size: 14px;
+                    color: $color_text;
+                    p{
+                        margin: 8px 0;
+                    }
+                    b {
+                        font-weight: 600;
+                        font-size: 16px;
+                    }
+                    img {
+                        position: absolute;
+                        left: -80px;
+                        top: 40px;
+                        width: 66px;
+                        border-radius: 50%;
+                        border: 1px solid grey;
+                        overflow: hidden;
+                    }
+                    &-stars {
+                        padding-bottom: 15px;
+                        color: goldenrod;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }         
+    }  
+    .load_more {
+        a {
+            text-decoration: underline;
+            color: $color_text;
+            font-size: 14px;
+        }
+        i {
+            font-size: 14px;
+            color: $color_text;            
+        } 
+    }
+} 
+
+.wecando {
+    background: #f3f1f2; 
+    padding-bottom: 50px;
+    &__title{
+        color: $color_text;
+        h3 {
+            font-size: 22px;
+            line-height: 46px;
+            font-family: "Gotham";
+            letter-spacing: 0.4px;
+        }
+        p {
+            font-size: 16px;
+        }
+    }
+    h5 {
+        color: $color_green;
+        font-size: 24px;
+        padding-bottom: 50px;
+    }
+    &__text__box {
+        position: relative;
+        width: 367px;
+        span {
+            display: block;
+            position: absolute;
+            left: 15px;
+            top: 10px;
+            width: 70px;
+            height: 70px;
+            font-size: 26px;
+            text-align: center;
+            line-height: 70px;
+            color: white;
+            background: $color_green;
+            border-radius: 50%;
+        }
+        p {   
+            color: $color_text;
+            width: 270px;
+            margin: 0 auto;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 0.3px;
+        }
+    }
+
+    &__rowicon {
+        width: 760px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        background: linear-gradient(to top, #f3f1f2 49%, grey 50%, #f3f1f2 51%);
+        margin-bottom: 50px;
+        i {
+            font-size: 46px;
+            color: grey;
+            border: 2px solid grey;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 90px;
+            background: #f3f1f2;
+            &:hover {
+                color: $color_green;
+                border-color: $color_green;
+            }
+        }
+    }
+}
+
+.footer  {
+    @include darkbg;
+    height: 100%;
+    margin-top: -26px;
+    padding-top: 20px;
+    color: white;
+    a {
+        color: white;
+    }
+    p {
+        color: rgba(white, 0.8);
+    }
+    &__subscribes {
+        h2 {
+        font-size: 24px;
+        margin-bottom: 40px;
+        }
+        form {
+            background: rgba(255,255,255,0.2);
+            border-radius: 30px;
+            height: 55px;
+            padding: 5px;
+            box-shadow: inset 0 0 2px 0 rgba(white, 0.4);
+            display: flex;
+            .mybtn {
+                height: 45px;
+                width: 120px;
+                font-family: 'Gotham', arial, sans-serif;
+                font-size: 12px;
+                line-height: 45px;
+                padding: 0 5px;
+                &:hover {
+                    background-color: darken($color_red, 20px);
+                }
+            } 
+        }
+        input[type=email]:not(.browser-default) {
+            border-bottom: none;
+            padding-left: 15px;
+            color: white;
+            font-size: 18px;
+        }
+        input[type=email]:not(.browser-default):focus:not([readonly]),
+        input[type=email].invalid:not(.browser-default) {
+            border-bottom: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }     
+    }
+    &__bottom {
+        a {
+            line-height: 24px;
+            font-size: 14px;
+            color: rgba(white, 0.5);
+        }
+        h5 {
+            font-size: 16px;
+            text-decoration: underline;
+        }
+        padding-bottom: 40px;
+        &__socials a i {
+            color:white;
+            font-size: 26px;
+            letter-spacing: 20px;
+            margin-top: 22px;
+            margin-bottom: 43px;
+        }
+    }
+}
+
+//@import "adaptive.scss";  
